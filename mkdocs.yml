@@ -1,0 +1,13 @@
+site_name: wAIk
+site_description: Documentation for the wAIk gait analysis project
+docs_dir: docs
+
+theme:
+  name: mkdocs
+
+nav:
+  - Home: index.md
+  - Project Specifications: Home.md
+  - Installation and Setup: Installation-and-Login.md
+  - Use Cases: Use-Cases.md
+  - Feature Documentation: Feature-Documentation.md
