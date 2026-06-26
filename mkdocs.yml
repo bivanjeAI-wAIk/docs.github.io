@@ -1,6 +1,7 @@
 site_name: wAIk
 site_description: Documentation for the wAIk gait analysis project
 docs_dir: docs
+site_url: https://bivanjeAI-wAIk.github.io/
 
 theme:
   name: mkdocs
