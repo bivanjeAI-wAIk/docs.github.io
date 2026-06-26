@@ -4,7 +4,7 @@ docs_dir: docs
 site_url: https://bivanjeAI-wAIk.github.io/
 
 theme:
-  name: mkdocs
+  name: material
 
 nav:
   - Home: index.md
