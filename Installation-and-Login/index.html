@@ -1,0 +1,802 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the wAIk gait analysis project">
+      
+      
+      
+        <link rel="canonical" href="https://bivanjeAI-wAIk.github.io/Installation-and-Login/">
+      
+      
+        <link rel="prev" href="../Project-Specifications/">
+      
+      
+        <link rel="next" href="../Use-Cases/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Installation and Setup - wAIk</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installation-and-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="wAIk" class="md-header__button md-logo" aria-label="wAIk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            wAIk
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation and Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="wAIk" class="md-nav__button md-logo" aria-label="wAIk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    wAIk
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project-Specifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation and Setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation and Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-cloning-and-installing-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Cloning and Installing Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-preparing-the-folder-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preparing the Folder Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-launching-the-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Launching the GUI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-installing-the-spo-service-linux-only-for-real-time-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Installing the SPO Service (Linux only, for real-time prediction)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-downloading-pre-trained-artifacts-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Downloading Pre-trained Artifacts (optional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-verifying-the-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Verifying the Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Use-Cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feature-Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-cloning-and-installing-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Cloning and Installing Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-preparing-the-folder-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preparing the Folder Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-launching-the-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Launching the GUI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-installing-the-spo-service-linux-only-for-real-time-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Installing the SPO Service (Linux only, for real-time prediction)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-downloading-pre-trained-artifacts-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Downloading Pre-trained Artifacts (optional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-verifying-the-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Verifying the Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="installation-and-setup">Installation and Setup</h1>
+<blockquote>
+<p><strong>Note:</strong> wAIk does not include a login or authentication system. The application runs locally on your device — simply running it is enough.</p>
+</blockquote>
+<hr />
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before installation, make sure you have the following available:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Version</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td>3.12.8</td>
+<td>Exact version recommended</td>
+</tr>
+<tr>
+<td><code>uv</code></td>
+<td>latest</td>
+<td>Package and virtual environment manager</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>any</td>
+<td>For cloning the repository</td>
+</tr>
+<tr>
+<td>CUDA drivers</td>
+<td>≥ 11.8</td>
+<td>Optional; needed only for GPU-accelerated training</td>
+</tr>
+<tr>
+<td><code>just</code></td>
+<td>latest</td>
+<td>Optional; simplifies common commands</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Installing <code>uv</code></strong> (if you don't already have it):</p>
+<pre><code class="language-sh"># Windows (PowerShell)
+powershell -ExecutionPolicy ByPass -c &quot;irm https://astral.sh/uv/install.ps1 | iex&quot;
+
+# Linux / macOS
+curl -LsSf https://astral.sh/uv/install.sh | sh
+</code></pre>
+<p><strong>Installing <code>just</code></strong> (optional):</p>
+<pre><code class="language-sh"># Using uv (after installing uv)
+uv tool install just
+
+# Linux (Debian/Ubuntu)
+sudo apt install just
+</code></pre>
+<hr />
+<h2 id="1-cloning-and-installing-dependencies">1. Cloning and Installing Dependencies</h2>
+<p>Clone the repository and install all Python dependencies with a single command:</p>
+<pre><code class="language-sh">git clone &lt;repo-url&gt;
+cd wAIk-projekt
+uv sync
+</code></pre>
+<p><code>uv sync</code> automatically creates a virtual environment (<code>.venv/</code>) and installs all dependencies from <code>pyproject.toml</code> into it. After this step, you don't need internet access for basic operation.</p>
+<hr />
+<h2 id="2-preparing-the-folder-structure">2. Preparing the Folder Structure</h2>
+<p>The application expects the following folders at the project root:</p>
+<pre><code>wAIk-projekt/
+├── binaries/    ← raw .bin recordings from the IMU sensor
+├── samples/     ← processed .npz samples
+└── artifacts/   ← saved models, metrics, plots
+</code></pre>
+<p><strong>Option A — using <code>just</code>:</strong></p>
+<pre><code class="language-sh">just setup
+</code></pre>
+<p><strong>Option B — manual:</strong></p>
+<pre><code class="language-sh">mkdir binaries samples artifacts
+</code></pre>
+<p>The folders are empty on first install. You add the contents (recordings and samples) yourself, or import them using the <code>just pull-artifacts</code> command (see section 5).</p>
+<hr />
+<h2 id="3-launching-the-gui">3. Launching the GUI</h2>
+<pre><code class="language-sh">uv run python app.py
+</code></pre>
+<p>Alternatively, if you have <code>just</code> installed:</p>
+<pre><code class="language-sh">just app
+</code></pre>
+<p>On startup, the main application window opens with the following tabs:</p>
+<table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset</td>
+<td>Creating <code>.npz</code> samples from <code>.bin</code> recordings</td>
+</tr>
+<tr>
+<td>Training</td>
+<td>Training the CNN model for identity recognition</td>
+</tr>
+<tr>
+<td>Artifact View</td>
+<td>Reviewing saved models and metrics</td>
+</tr>
+<tr>
+<td>Live Predict</td>
+<td>Real-time prediction (requires the SPO service)</td>
+</tr>
+<tr>
+<td>Predict</td>
+<td>Prediction from existing <code>.npz</code> files</td>
+</tr>
+<tr>
+<td>Sample View</td>
+<td>Visualization of <code>.npz</code> samples</td>
+</tr>
+<tr>
+<td>View Binaries</td>
+<td>Visualization of raw <code>.bin</code> recordings</td>
+</tr>
+<tr>
+<td>History</td>
+<td>Reviewing and exporting prediction history</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-installing-the-spo-service-linux-only-for-real-time-prediction">4. Installing the SPO Service (Linux only, for real-time prediction)</h2>
+<p>This step is needed <strong>only</strong> if you want to run real-time predictions via a physical IMU sensor. This functionality is not supported on Windows and macOS.</p>
+<p>The SPO service is a system daemon that listens on <code>127.0.0.1:5000</code> and forwards the binary data stream from the sensor to the application.</p>
+<p><strong>1. Copy the service file:</strong></p>
+<pre><code class="language-sh">cp spo/spo.service ~/.config/systemd/user/spo.service
+</code></pre>
+<p>Instead of copying, you can create a symbolic link, which makes updates easier:</p>
+<pre><code class="language-sh">ln -s &quot;$(pwd)/spo/spo.service&quot; ~/.config/systemd/user/spo.service
+</code></pre>
+<p><strong>2. Enable and start the service:</strong></p>
+<pre><code class="language-sh">systemctl --user enable spo
+systemctl --user start spo
+</code></pre>
+<p><strong>3. Check the status:</strong></p>
+<pre><code class="language-sh">systemctl --user status spo
+</code></pre>
+<p>The output must contain <code>active (running)</code>. After this, the service will start automatically on every login.</p>
+<hr />
+<h2 id="5-downloading-pre-trained-artifacts-optional">5. Downloading Pre-trained Artifacts (optional)</h2>
+<p>If you don't want to train the model yourself, you can download pre-trained weights and artifacts:</p>
+<pre><code class="language-sh">just pull-artifacts v0.1
+</code></pre>
+<p>The command downloads the saved models, XGBoost regressors, and metrics for the <code>v0.1</code> tag and stores them in the <code>artifacts/</code> folder. After this step, the <em>Predict</em> and <em>Artifact View</em> tabs are immediately usable.</p>
+<hr />
+<h2 id="6-verifying-the-installation">6. Verifying the Installation</h2>
+<p>Run the test suite to verify the installation is correct:</p>
+<pre><code class="language-sh">uv run pytest -m &quot;not slow and not local&quot;
+</code></pre>
+<p>Tests tagged <code>slow</code> require a longer execution time (model training), while those tagged <code>local</code> require access to local data files or hardware. For a basic installation check, these are skipped.</p>
+<p>A successful output looks like this:</p>
+<pre><code>============================= test session starts ==============================
+...
+===================== N passed in X.XXs =======================================
+</code></pre>
+<p>If errors occur, check:</p>
+<ul>
+<li>Whether the Python version is exactly 3.12.8 (<code>uv run python --version</code>)</li>
+<li>Whether all dependencies are installed (<code>uv sync</code>)</li>
+<li>Whether the <code>binaries/</code>, <code>samples/</code>, and <code>artifacts/</code> folders exist</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

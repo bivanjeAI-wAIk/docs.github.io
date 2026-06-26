@@ -1,0 +1,751 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the wAIk gait analysis project">
+      
+      
+      
+        <link rel="canonical" href="https://bivanjeAI-wAIk.github.io/Use-Cases/">
+      
+      
+        <link rel="prev" href="../Installation-and-Login/">
+      
+      
+        <link rel="next" href="../Feature-Documentation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Use Cases - wAIk</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#use-cases" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="wAIk" class="md-header__button md-logo" aria-label="wAIk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            wAIk
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Use Cases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="wAIk" class="md-nav__button md-logo" aria-label="wAIk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    wAIk
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project-Specifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Installation-and-Login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation and Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Cases
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-1-creating-a-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 1: Creating a Dataset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-2-training-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 2: Training a Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-3-analyzing-a-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 3: Analyzing a Recording
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-4-live-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 4: Live Prediction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-5-signal-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 5: Signal Visualization
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feature-Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-1-creating-a-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 1: Creating a Dataset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-2-training-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 2: Training a Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-3-analyzing-a-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 3: Analyzing a Recording
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-4-live-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 4: Live Prediction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-5-signal-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Case 5: Signal Visualization
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="use-cases">Use Cases</h1>
+<p>This document describes the five main use cases of the <strong>wAIk</strong> application — a desktop tool for capturing IMU sensor data, training models, and recognizing identity and biometric attributes based on gait.</p>
+<blockquote>
+<p><strong>Note:</strong> wAIk does not have a login or authentication system. The application is available immediately upon launching it with <code>uv run python app.py</code> (or <code>just app</code>). All use cases begin from the main application window.</p>
+</blockquote>
+<hr />
+<h2 id="use-case-1-creating-a-dataset">Use Case 1: Creating a Dataset</h2>
+<p><strong>What the user wants to do:</strong>
+The user wants to create <code>.npz</code> samples from raw binary recordings (<code>.bin</code> files) to be used for training models.</p>
+<p><strong>Execution steps:</strong></p>
+<ol>
+<li>Open the <strong>Dataset</strong> tab in the application.</li>
+<li>In the path field, set the location of the <code>annotations.yaml</code> file (contains a list of <code>.bin</code> recordings with user labels, time segments, and metadata).</li>
+<li>Set the path to the <code>dataset.yaml</code> file (contains general dataset settings).</li>
+<li>Set the output folder for samples, e.g. <code>samples/</code>.</li>
+<li>Click the <strong>Generate Samples</strong> button.</li>
+<li>Wait for a message in the log of the form:
+   <code>Generated N samples.</code></li>
+</ol>
+<p><strong>Result:</strong>
+<code>.npz</code> files are created in the <code>samples/</code> folder, named according to the convention:</p>
+<pre><code>{prefix}{index}_l{label}_{position}_{age}_{gender}.npz
+</code></pre>
+<p>These files are ready for the next step — model training.</p>
+<p><strong>Troubleshooting:</strong>
+- If the log shows <code>0 samples generated</code>, verify that the <code>.bin</code> files listed in <code>annotations.yaml</code> exist and that the time segments are within the recording duration.
+- If a file cannot be parsed, check that the <code>.bin</code> file was produced by the SPO service and is not corrupted (incomplete transfer).</p>
+<hr />
+<h2 id="use-case-2-training-a-model">Use Case 2: Training a Model</h2>
+<p><strong>What the user wants to do:</strong>
+The user wants to train a CNN model for identity recognition and XGBoost models for predicting biometric attributes (age, height, weight, sex).</p>
+<p><strong>Execution steps:</strong></p>
+<ol>
+<li>Open the <strong>Training</strong> tab in the application.</li>
+<li>Set the path to the samples folder (e.g. <code>samples/</code>).</li>
+<li>Set the path to the output folder for artifacts (e.g. <code>artifacts/</code>).</li>
+<li>Configure the hyperparameters:</li>
+<li>Number of epochs (<code>epochs</code>)</li>
+<li>Batch size (<code>batch size</code>)</li>
+<li>Validation split (<code>validation split</code>)</li>
+<li>Early stopping (<code>early stopping</code>)</li>
+<li>Click <strong>Train Identity</strong> to train the CNN identity recognition model, or <strong>Train All</strong> to sequentially train all models (identity + age + attributes).</li>
+<li>Monitor progress via the progress bar and log. Log message format:
+   <code>epoch=3/40 batch=120/246 val_loss=0.612 val_acc=0.834</code></li>
+<li>Training can be <strong>paused and resumed</strong> with the Pause / Resume buttons.</li>
+<li>After completion, a dialog may appear asking whether to save a checkpoint.</li>
+</ol>
+<p><strong>Result:</strong>
+The following files are saved in the <code>artifacts/</code> folder:
+- <code>cnn_identity.pth</code> — the trained CNN model
+- <code>xgb_age.json</code>, <code>xgb_height.json</code>, <code>xgb_weight.json</code>, <code>xgb_sex.json</code> — XGBoost models
+- <code>identity_labels.json</code>, <code>thresholds.json</code>, <code>train_config.json</code>, <code>training_metrics.json</code></p>
+<p>Training charts can be viewed in the <strong>Artifact View</strong> tab.</p>
+<p><strong>Troubleshooting:</strong>
+- If <code>val_acc</code> stays near <code>1/N</code> (where N is the number of identities), the model is not learning — check that samples from multiple identities are present and that the samples folder path is correct.
+- GPU training requires CUDA drivers ≥ 11.8; if CUDA is unavailable, training falls back to CPU automatically (slower).</p>
+<hr />
+<h2 id="use-case-3-analyzing-a-recording">Use Case 3: Analyzing a Recording</h2>
+<p><strong>What the user wants to do:</strong>
+The user wants to identify a person and obtain a prediction of their biometric attributes based on an existing <code>.npz</code> gait recording.</p>
+<p><strong>Execution steps:</strong></p>
+<ol>
+<li>Open the <strong>Predict</strong> tab in the application.</li>
+<li>Use the file selection button to choose a <code>.npz</code> gait sample.</li>
+<li>Set the path to the <code>artifacts/</code> folder containing the trained models.</li>
+<li>Click the <strong>Predict</strong> button.</li>
+<li>Wait for the model to process the sample (multi-window inference with voting).</li>
+<li>The following values are displayed:</li>
+<li><strong>Age</strong> — predicted age</li>
+<li><strong>Height</strong> — predicted height</li>
+<li><strong>Weight</strong> — predicted weight</li>
+<li><strong>Sex</strong> — predicted sex</li>
+<li><strong>One of us: yes / no</strong> — whether the person is in the training set</li>
+<li><strong>Identity</strong> — name of the recognized person (e.g. <code>miha</code>, <code>leon</code>, <code>luka</code>)</li>
+<li><strong>Confidence</strong> — prediction confidence as a percentage</li>
+<li>The prediction is automatically added to the <strong>History</strong> tab.</li>
+</ol>
+<p><strong>Result:</strong>
+The predicted biometric attributes and the person's identity are displayed together with a confidence value. A confidence of <strong>≥ 80%</strong> means the person is classified as <em>One of us: yes</em> (a known identity from the training set). Below 80%, the person is considered unknown — the model has seen a gait it does not recognize.</p>
+<p><strong>Troubleshooting:</strong>
+- If <code>artifacts/</code> is empty, either run training first or download pre-trained artifacts with <code>just pull-artifacts v0.1</code>.
+- If the recording is very short (&lt; 5 seconds of usable walking), only one window will be evaluated, which may reduce accuracy.</p>
+<hr />
+<h2 id="use-case-4-live-prediction">Use Case 4: Live Prediction</h2>
+<p><strong>What the user wants to do:</strong>
+The user wants to identify a walking person in real time, using the SPO hardware and a live IMU data stream.</p>
+<blockquote>
+<p><strong>Prerequisite:</strong> This use case requires Linux and a connected IMU sensor unit. The SPO service must be installed (see <a href="../Installation-and-Login/">Installation and Setup</a>).</p>
+</blockquote>
+<p><strong>Execution steps:</strong></p>
+<ol>
+<li>Make sure the SPO service is running. On Linux, check the status with the command:
+   <code>bash
+   systemctl --user status spo</code>
+   The output must contain <code>active (running)</code>.</li>
+<li>Open the <strong>Live Predict</strong> tab in the application.</li>
+<li>Set the recording duration (e.g. <code>10</code> seconds).</li>
+<li>Set the path to the <code>artifacts/</code> folder with the trained models.</li>
+<li>Click the <strong>Capture + Predict</strong> button.</li>
+<li>The application sends the command <code>STREAM|10</code> to the SPO service via a TCP connection (localhost:5000).</li>
+<li>The SPO service records IMU data and saves it to a <code>.bin</code> file in the <code>binaries/</code> folder, then responds with:
+   <code>Stream captured to &lt;filename&gt;</code></li>
+<li>The application automatically converts the <code>.bin</code> to <code>.npz</code>, runs inference, and displays the results:</li>
+<li><strong>One of us</strong> — whether the person is recognized</li>
+<li><strong>Who</strong> — name of the identity</li>
+<li><strong>Confidence</strong> — confidence as a percentage</li>
+<li><strong>Age</strong>, <strong>Height</strong>, <strong>Weight</strong>, <strong>Sex</strong> — biometric attributes</li>
+<li>Paths to the saved <code>.bin</code> and <code>.npz</code> files</li>
+</ol>
+<p><strong>Result:</strong>
+The result of the real-time gait identification is displayed and saved. The binary file and the sample (<code>.npz</code>) are available for later analysis in the <strong>Sample View</strong> or <strong>Predict</strong> tabs. The prediction is added to the <strong>History</strong> tab.</p>
+<p><strong>Troubleshooting:</strong>
+- If the button produces a connection error, verify the SPO service is running (<code>systemctl --user status spo</code>) and that nothing else is listening on port 5000.
+- If the result shows <em>One of us: no</em> for a person who should be recognized, try a longer recording duration (15–20 seconds) to provide more windows for voting.</p>
+<hr />
+<h2 id="use-case-5-signal-visualization">Use Case 5: Signal Visualization</h2>
+<p><strong>What the user wants to do:</strong>
+The user wants to review the raw acceleration and angular velocity signal from a gait recording and assess its quality before using it for training or analysis.</p>
+<p><strong>Execution steps:</strong></p>
+<ol>
+<li>Open the <strong>Sample View</strong> tab in the application.</li>
+<li>Use the file selection button to choose a <code>.npz</code> file.</li>
+<li>Set the <strong>start time</strong> (in seconds) — where in the recording to begin the display.</li>
+<li>Set the <strong>duration</strong> (in seconds) — how much of the recording to display.</li>
+<li>Click the <strong>Load Sample</strong> button.</li>
+<li>A 2×2 grid of plots is displayed:</li>
+<li><strong>Top left:</strong> time-domain acceleration (accelerometer) signal on the X, Y, Z axes</li>
+<li><strong>Top right:</strong> STFT spectrogram of acceleration</li>
+<li><strong>Bottom left:</strong> time-domain angular velocity (gyroscope) signal on the X, Y, Z axes</li>
+<li><strong>Bottom right:</strong> STFT spectrogram of angular velocity</li>
+</ol>
+<p><strong>Result:</strong>
+A visual representation of the gait signal is shown. Use the plots to assess recording quality:</p>
+<table>
+<thead>
+<tr>
+<th>What you see</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regular oscillations at ~1–2 Hz in the time-domain plots</td>
+<td>Normal walking cadence — good quality recording</td>
+</tr>
+<tr>
+<td>Flat or near-zero signal on one or more axes</td>
+<td>Sensor may have been stationary, disconnected, or clipped</td>
+</tr>
+<tr>
+<td>Sudden large spikes</td>
+<td>Impact artifacts (e.g. the person stumbled or the sensor shifted) — consider excluding this time segment in <code>annotations.yaml</code></td>
+</tr>
+<tr>
+<td>Energy concentrated in 0–10 Hz bands in the spectrograms</td>
+<td>Expected for walking; the Butterworth low-pass filter cutoff is 10 Hz</td>
+</tr>
+<tr>
+<td>Broadband noise across all frequencies in the spectrogram</td>
+<td>High-frequency noise; verify the low-pass filter was applied during preprocessing</td>
+</tr>
+</tbody>
+</table>
+<p>For raw <code>.bin</code> files (before preprocessing), use the <strong>View Binaries</strong> tab instead, which shows the unparsed sensor packets directly.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

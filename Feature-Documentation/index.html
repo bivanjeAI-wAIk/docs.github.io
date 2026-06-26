@@ -1,0 +1,932 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the wAIk gait analysis project">
+      
+      
+      
+        <link rel="canonical" href="https://bivanjeAI-wAIk.github.io/Feature-Documentation/">
+      
+      
+        <link rel="prev" href="../Use-Cases/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Feature Documentation - wAIk</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#feature-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="wAIk" class="md-header__button md-logo" aria-label="wAIk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            wAIk
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Feature Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="wAIk" class="md-nav__button md-logo" aria-label="wAIk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    wAIk
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project-Specifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Installation-and-Login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation and Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Use-Cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Documentation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#feature-1-binary-recording-parser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 1: Binary Recording Parser
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-2-signal-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 2: Signal Processing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-3-sample-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 3: Sample Generation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-4-cnn-model-for-identity-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 4: CNN Model for Identity Recognition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-5-xgboost-models-for-biometric-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 5: XGBoost Models for Biometric Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-6-window-voting-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 6: Window-Voting Inference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-7-spo-communication-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 7: SPO Communication Service
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-8-prediction-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 8: Prediction History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#feature-1-binary-recording-parser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 1: Binary Recording Parser
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-2-signal-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 2: Signal Processing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-3-sample-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 3: Sample Generation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-4-cnn-model-for-identity-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 4: CNN Model for Identity Recognition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-5-xgboost-models-for-biometric-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 5: XGBoost Models for Biometric Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-6-window-voting-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 6: Window-Voting Inference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-7-spo-communication-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 7: SPO Communication Service
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-8-prediction-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature 8: Prediction History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="feature-documentation">Feature Documentation</h1>
+<p>This document describes eight key implemented features of the <strong>wAIk</strong> application.</p>
+<hr />
+<h2 id="feature-1-binary-recording-parser">Feature 1: Binary Recording Parser</h2>
+<p><strong>Purpose of implementation:</strong>
+Raw IMU data captured by the SPO hardware is stored in binary form (<code>.bin</code>). To process it, a parser is needed that understands the transfer protocol — including sync markers, byte stuffing, and integrity checking.</p>
+<p><strong>Implementation approach:</strong></p>
+<ul>
+<li><strong>File:</strong> <code>src/waik/protocol.py</code></li>
+<li><strong>Class:</strong> <code>Parse</code></li>
+</ul>
+<p>The parser works as follows:
+1. Searches for sync markers <code>0xFF 0xFF</code> in the binary data stream.
+2. Performs <strong>byte unstuffing</strong> — unpacking special bytes inserted to separate packets.
+3. Checks <strong>CRC-16</strong> for each packet to ensure data integrity.
+4. Splits the stream into <code>Packet(id, timestamp, data)</code> objects.</p>
+<p>Three sensor IDs are supported:
+| ID | Sensor |
+|----|--------|
+| 1  | Gyroscope (angular velocity) |
+| 2  | Accelerometer (acceleration) |
+| 3  | Magnetometer |</p>
+<p><strong>Usage:</strong>
+The parser is called internally via <code>SensorDataProcessor.load()</code> when loading a <code>.bin</code> file for processing. It is also directly accessible via the <strong>View Binaries</strong> tab, which loads and displays raw sensor data from a <code>.bin</code> file.</p>
+<p><strong>Related issues:</strong> SCRUM-6, SCRUM-12</p>
+<p><strong>Known limitations:</strong>
+- Packets that fail CRC-16 validation are silently discarded. If a large portion of a recording is corrupted (e.g. due to a USB transfer error), the resulting signal will have gaps that may not be visible without inspecting the timestamp sequence.
+- The parser expects <code>.bin</code> files produced specifically by the SPO service. Files from other IMU hardware or recording tools are not supported.</p>
+<hr />
+<h2 id="feature-2-signal-processing">Feature 2: Signal Processing</h2>
+<p><strong>Purpose of implementation:</strong>
+Raw int16 values from the sensors are not directly suitable for model training. Conversion to physical units, alignment of all sensor time series to a common sampling rate, and noise filtering are needed.</p>
+<p><strong>Implementation approach:</strong></p>
+<ul>
+<li><strong>File:</strong> <code>src/waik/preprocessing.py</code></li>
+<li><strong>Class:</strong> <code>SensorDataProcessor</code></li>
+</ul>
+<p>The processing pipeline proceeds through the following steps:</p>
+<ol>
+<li><strong><code>load()</code></strong> — loads and parses the <code>.bin</code> file using the <code>Parse</code> class.</li>
+<li><strong><code>process_all()</code></strong> — converts raw int16 values into physical units (e.g. m/s² for acceleration, °/s for gyroscope).</li>
+<li><strong><code>mag_resampling()</code></strong> — resamples all sensors to a uniform <strong>100 Hz</strong> rate, mean-centers the acceleration, and computes the normalized signal magnitude.</li>
+<li><strong><code>apply_runtime_lowpass()</code></strong> — applies a <strong>Butterworth low-pass filter</strong> with a 10 Hz cutoff frequency.</li>
+</ol>
+<p>The output is saved in <code>.npz</code> format with the following keys:
+- <code>acc_matrix</code>, <code>acc_mag_matrix</code>, <code>acc_fs</code>
+- <code>gyro_matrix</code> and others</p>
+<p><strong>Usage:</strong>
+The pipeline is triggered automatically when generating samples (<strong>Dataset</strong> tab) and during inference from a <code>.bin</code> file (<strong>Live Predict</strong> tab). The processed <code>.npz</code> files serve as input for the model and for visualization.</p>
+<p><strong>Related issues:</strong> SCRUM-8, SCRUM-9, SCRUM-10</p>
+<p><strong>Known limitations:</strong>
+- The magnetometer (sensor ID 3) is parsed but not used in model training or inference. Its data is available in the <code>.npz</code> output but not currently passed to any downstream model.
+- Resampling to 100 Hz assumes the original sensor rate is close to 100 Hz. Recordings captured at significantly different rates may produce aliasing or interpolation artifacts.
+- Mean-centering of the acceleration removes the gravity component under the assumption of a roughly constant sensor orientation during walking. Recordings with large postural changes may not be correctly normalized.</p>
+<hr />
+<h2 id="feature-3-sample-generation">Feature 3: Sample Generation</h2>
+<p><strong>Purpose of implementation:</strong>
+Training models require fixed-length, labeled samples. Windows of a specific length must be cut from long gait recordings and saved with the appropriate metadata (identity, age, sex).</p>
+<p><strong>Implementation approach:</strong></p>
+<ul>
+<li><strong>Files:</strong> <code>src/waik/prepare_samples.py</code>, <code>src/waik/model/prepare_samples.py</code></li>
+</ul>
+<p>Procedure:
+1. Reads <code>annotations.yaml</code> — a list of <code>.bin</code> recordings with user labels, time segments, and metadata.
+2. Reads <code>dataset.yaml</code> — general dataset settings.
+3. For each segment, cuts windows of <strong>5 seconds</strong> in length with a step of <strong>2.5 seconds</strong> (50% overlap).
+4. Saves each window as a <code>.npz</code> file.</p>
+<p>Naming convention:</p>
+<pre><code>{prefix}{index}_l{label}_{position}_{age}_{gender}.npz
+</code></pre>
+<p><strong>Usage:</strong>
+- <strong>GUI:</strong> <strong>Dataset</strong> tab → <strong>Generate Samples</strong> button
+- <strong>CLI:</strong> <code>just samples</code></p>
+<p><strong>Related issues:</strong> SCRUM-34, SCRUM-56</p>
+<p><strong>Known limitations:</strong>
+- Windows shorter than 5 seconds (e.g. at the very end of a recording segment) are discarded. Short recordings may therefore produce fewer samples than expected.
+- Sample generation does not perform data augmentation. All samples are derived directly from the original recordings; the dataset size is limited by the number and length of available <code>.bin</code> files.
+- Re-running sample generation overwrites existing <code>.npz</code> files in the output folder if they share the same name. Changing the <code>prefix</code> in <code>dataset.yaml</code> between runs is recommended to avoid accidental overwriting.</p>
+<hr />
+<h2 id="feature-4-cnn-model-for-identity-recognition">Feature 4: CNN Model for Identity Recognition</h2>
+<p><strong>Purpose of implementation:</strong>
+The goal is to recognize a person based on a gait sample. The convolutional neural network learns to distinguish between individuals by analyzing STFT spectrograms of the IMU signals.</p>
+<p><strong>Implementation approach:</strong></p>
+<ul>
+<li><strong>File:</strong> <code>src/waik/model/model.py</code></li>
+<li><strong>Class:</strong> <code>GaitIdentityModel</code></li>
+</ul>
+<p>Model architecture:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Backbone</strong></td>
+<td>EfficientNet-lite0 (via the <code>timm</code> library)</td>
+</tr>
+<tr>
+<td><strong>Input</strong></td>
+<td>6-channel 224×224 image: 3-axis acceleration STFT + 3-axis gyroscope STFT</td>
+</tr>
+<tr>
+<td><strong>Embedding head</strong></td>
+<td><code>Linear(num_features→512)</code> → <code>ReLU</code> → <code>Dropout</code> → <code>Linear(512→256)</code> → <code>ReLU</code> → <code>Dropout</code>, followed by L2 normalization of the resulting embedding</td>
+</tr>
+<tr>
+<td><strong>Classifier</strong></td>
+<td><code>Linear(256→num_identities)</code></td>
+</tr>
+<tr>
+<td><strong>Auxiliary heads</strong> <em>(optional)</em></td>
+<td>Prediction of age, height, weight, and sex (enabled with <code>use_auxiliary_heads=True</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Training is implemented in <code>src/waik/model/train_identity.py</code>.</p>
+<p><strong>Usage:</strong>
+- <strong>GUI:</strong> <strong>Training</strong> tab → <strong>Train Identity</strong> button
+- The output is <code>cnn_identity.pth</code> in the <code>artifacts/</code> folder.</p>
+<p><strong>Related issues:</strong> SCRUM-22, SCRUM-38, SCRUM-48, SCRUM-60</p>
+<p><strong>Known limitations:</strong>
+- The model is a closed-set classifier: it can only predict identities present in the training set. A person not in the training set will be assigned to the closest known identity with low confidence, not rejected outright — the <code>one_of_us</code> flag (threshold 0.80) is the only indicator of an unknown subject.
+- Recognition accuracy degrades if gait conditions differ significantly between training and inference (e.g. different footwear, walking speed, or sensor placement position).
+- The minimum useful recording length for inference is approximately 7.5 seconds (enough for 2 overlapping windows). Shorter recordings produce a single-window prediction with no voting benefit.</p>
+<hr />
+<h2 id="feature-5-xgboost-models-for-biometric-attributes">Feature 5: XGBoost Models for Biometric Attributes</h2>
+<p><strong>Purpose of implementation:</strong>
+In addition to identity, the application aims to predict a person's biometric attributes (age, height, weight, sex). Since the CNN embeddings already contain biometrically relevant information, the XGBoost models are trained on these vector representations.</p>
+<p><strong>Implementation approach:</strong></p>
+<ul>
+<li><strong>Files:</strong> <code>src/waik/model/train_age.py</code>, <code>src/waik/model/train_attributes.py</code>, <code>src/waik/model/xgboost_pipeline.py</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Type</th>
+<th>Input</th>
+<th>Output</th>
+<th>Evaluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Age</strong></td>
+<td><code>XGBRegressor</code></td>
+<td>256-dim CNN embedding</td>
+<td>years</td>
+<td>MAE, RMSE</td>
+</tr>
+<tr>
+<td><strong>Height</strong></td>
+<td><code>XGBRegressor</code></td>
+<td>310-dim (256-dim embedding + 54-dim band energy from STFT)</td>
+<td>cm</td>
+<td>MAE, RMSE</td>
+</tr>
+<tr>
+<td><strong>Weight</strong></td>
+<td><code>XGBRegressor</code></td>
+<td>310-dim</td>
+<td>kg</td>
+<td>MAE, RMSE</td>
+</tr>
+<tr>
+<td><strong>Sex</strong></td>
+<td><code>XGBClassifier</code></td>
+<td>310-dim</td>
+<td>binary</td>
+<td>accuracy</td>
+</tr>
+</tbody>
+</table>
+<p>Saved artifacts: <code>xgb_age.json</code>, <code>xgb_height.json</code>, <code>xgb_weight.json</code>, <code>xgb_sex.json</code></p>
+<p><strong>Usage:</strong>
+- <strong>GUI:</strong> <strong>Training</strong> tab → <strong>Train Age</strong>, <strong>Train Attributes</strong>, or <strong>Train All</strong> buttons
+- <code>Train All</code> sequentially runs training of the CNN model and all XGBoost models.</p>
+<p><strong>Related issues:</strong> SCRUM-24, SCRUM-37, SCRUM-50, SCRUM-59</p>
+<p><strong>Known limitations:</strong>
+- The XGBoost models depend on CNN embeddings, so they must be retrained whenever <code>cnn_identity.pth</code> is updated. Using XGBoost models trained on embeddings from a different CNN version will produce unreliable results.
+- Prediction accuracy for age, height, and weight is limited by the diversity of the training dataset. The local dataset (3 subjects) is insufficient for generalizable attribute prediction; the Kaggle dataset (93 subjects) is recommended.
+- The sex classifier outputs a binary prediction and does not support non-binary labels.</p>
+<hr />
+<h2 id="feature-6-window-voting-inference">Feature 6: Window-Voting Inference</h2>
+<p><strong>Purpose of implementation:</strong>
+A single 5-second window may not be sufficient for a reliable prediction, since gait is not always uniform. Aggregating predictions across all overlapping windows of the entire recording reduces the impact of local anomalies and increases reliability.</p>
+<p><strong>Implementation approach:</strong></p>
+<ul>
+<li><strong>File:</strong> <code>src/waik/model/inference.py</code></li>
+<li><strong>Class:</strong> <code>InferenceService</code></li>
+<li><strong>Method:</strong> <code>predict_npz()</code></li>
+</ul>
+<p>Inference procedure:</p>
+<ol>
+<li>Cuts overlapping windows of <strong>5 seconds</strong> in length with a step of <strong>2.5 seconds</strong> (250 samples at 100 Hz) from the entire recording.</li>
+<li>Computes a <strong>6-channel STFT image</strong> (224×224) for each window.</li>
+<li>Runs the CNN for each window and collects <strong>softmax probabilities</strong>.</li>
+<li><strong>Averages the probabilities</strong> across all windows → final identity prediction.</li>
+<li>Also averages the 256-dimensional embeddings → input for the age XGBoost model.</li>
+<li>Computes the 310-dimensional extended features (embedding + band energies) → input for the height, weight, and sex models.</li>
+</ol>
+<p>The confidence threshold (default <strong>0.80</strong>) determines the value of the <code>one_of_us</code> flag:
+- Value above the threshold → the person is recognized as "one of us"
+- Value below the threshold → the person is not in the training set</p>
+<p><strong>Usage:</strong>
+- <strong>GUI:</strong> <strong>Predict</strong> tab (for existing <code>.npz</code> files) and <strong>Live Predict</strong> tab (for live recordings)</p>
+<p><strong>Related issues:</strong> SCRUM-43</p>
+<p><strong>Known limitations:</strong>
+- The voting strategy averages softmax probabilities uniformly across all windows. Windows containing non-walking segments (e.g. the subject standing still at the start or end of a recording) are not filtered out and may dilute the prediction.
+- The confidence threshold of 0.80 is a fixed default and is not automatically calibrated to the training dataset. For datasets with many similar-looking identities, a higher threshold may be needed to reduce false positives.</p>
+<hr />
+<h2 id="feature-7-spo-communication-service">Feature 7: SPO Communication Service</h2>
+<p><strong>Purpose of implementation:</strong>
+To capture live IMU data, the application communicates with a specialized hardware-software service (SPO) that directly drives the sensor device. Communication occurs via a local TCP socket, which provides clean separation between the GUI application and the driver layer.</p>
+<p><strong>Implementation approach:</strong></p>
+<ul>
+<li><strong>Files:</strong> <code>src/waik/spo/client.py</code>, <code>spo/communication.py</code>, <code>spo/spo.service</code></li>
+</ul>
+<p>Communication flow:</p>
+<ol>
+<li>The TCP client connects to <strong>localhost:5000</strong>.</li>
+<li>It sends the command <code>STREAM|N</code>, where <code>N</code> is the number of seconds to record.</li>
+<li>The SPO service records IMU data and saves it to a <code>.bin</code> file in the <code>binaries/</code> folder.</li>
+<li>The service responds with:
+   <code>Stream captured to &lt;filename&gt;</code></li>
+<li>The <code>capture_stream_binary()</code> function in <code>live_capture.py</code> then sequentially calls:</li>
+<li><code>create_live_prediction_sample()</code> — converts <code>.bin</code> to <code>.npz</code></li>
+<li><code>predict_sample()</code> — runs inference</li>
+</ol>
+<p>The SPO service runs as a <strong>Linux systemd user service</strong> (defined in <code>spo/spo.service</code>).</p>
+<p><strong>Usage:</strong>
+- Starting the service: <code>systemctl --user start spo</code>
+- Checking status: <code>systemctl --user status spo</code>
+- <strong>GUI:</strong> <strong>Live Predict</strong> tab → <strong>Capture + Predict</strong> button</p>
+<p><strong>Related issues:</strong> SCRUM-31, SCRUM-44</p>
+<p><strong>Known limitations:</strong>
+- The SPO service is Linux-only due to its systemd dependency. Windows and macOS users cannot use the Live Predict feature.
+- If the TCP connection times out (e.g. the service is not running or port 5000 is blocked), the GUI displays a connection error. There is no automatic retry; the user must manually restart the service and click <strong>Capture + Predict</strong> again.
+- Only one client can connect to the SPO service at a time. Running multiple application instances simultaneously will cause the second connection to fail.</p>
+<hr />
+<h2 id="feature-8-prediction-history">Feature 8: Prediction History</h2>
+<p><strong>Purpose of implementation:</strong>
+During a session, the user makes multiple predictions from different sources (manually loaded samples, live recordings). A historical record together with visualization allows comparing results, spotting trends, and exporting data for further analysis.</p>
+<p><strong>Implementation approach:</strong></p>
+<ul>
+<li><strong>File:</strong> <code>src/waik/gui/tabs/history_tab.py</code></li>
+<li><strong>Class:</strong> <code>HistoryTab</code></li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>
+<p><strong>Prediction table</strong> with the following columns:
+  <code>#</code> | <code>Time</code> | <code>Source</code> | <code>Identity</code> | <code>Age</code> | <code>Confidence</code></p>
+</li>
+<li>
+<p><strong>Live scatter plot</strong> with two Y axes:</p>
+</li>
+<li>Left axis: predicted age — green dots = recognized person, red dots = unrecognized</li>
+<li>
+<p>Right axis: confidence in % (orange dashed line)</p>
+</li>
+<li>
+<p><strong>Statistics row:</strong> total number of predictions, number of recognized (Known) and unrecognized (Unknown)</p>
+</li>
+<li>
+<p><strong>Export CSV button:</strong> saves the entire history to a CSV file chosen by the user</p>
+</li>
+</ul>
+<p>Each tab (<strong>Predict</strong> and <strong>Live Predict</strong>) calls <code>add_prediction(result: PredictionResult, source: str)</code>, which adds the prediction to the list and refreshes the table and chart.</p>
+<p><strong>Usage:</strong>
+- The <strong>History</strong> tab is the last tab in the main application window.
+- It is accessible at any time during the session; it updates automatically with each new prediction.
+- Data export: <strong>Export CSV</strong> button → choose a path to save the <code>.csv</code> file.</p>
+<p><strong>Related issues:</strong> SCRUM-57, SCRUM-58</p>
+<p><strong>Known limitations:</strong>
+- <strong>History is session-only and is not persisted to disk.</strong> Closing the application clears all history. Use the <strong>Export CSV</strong> button before closing if the data needs to be retained.
+- The scatter plot does not update in real time during a long inference run; it refreshes only after each prediction is fully completed and <code>add_prediction()</code> is called.
+- The CSV export includes only the columns shown in the table (<code>#</code>, <code>Time</code>, <code>Source</code>, <code>Identity</code>, <code>Age</code>, <code>Confidence</code>). Additional prediction details (height, weight, sex, <code>one_of_us</code> flag) are not included in the export.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
