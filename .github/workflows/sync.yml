@@ -8,10 +8,19 @@ jobs:
   wiki-sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config --global init.defaultBranch main
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
       - name: Push to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
           path: 'docs'
+          repo: 'bivanjeAI-wAIk/docs' 
         env:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
