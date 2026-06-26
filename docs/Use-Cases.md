@@ -109,7 +109,7 @@ The predicted biometric attributes and the person's identity are displayed toget
 **What the user wants to do:**
 The user wants to identify a walking person in real time, using the SPO hardware and a live IMU data stream.
 
-> **Prerequisite:** This use case requires Linux and a connected IMU sensor unit. The SPO service must be installed (see [Installation and Setup](Installation-and-Login)).
+> **Prerequisite:** This use case requires Linux and a connected IMU sensor unit. The SPO service must be installed (see [Installation and Setup](Installation-and-Login.md)).
 
 **Execution steps:**
 

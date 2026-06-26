@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://bivanjeAI-wAIk.github.io/Installation-and-Login/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Installation and Setup - wAIk</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">wAIk</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Home/" class="nav-link">Project Specifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Installation and Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Use-Cases/" class="nav-link">Use Cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Feature-Documentation/" class="nav-link">Feature Documentation</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Home/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Use-Cases/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#installation-and-setup" class="nav-link">Installation and Setup</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1-cloning-and-installing-dependencies" class="nav-link">1. Cloning and Installing Dependencies</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-preparing-the-folder-structure" class="nav-link">2. Preparing the Folder Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-launching-the-gui" class="nav-link">3. Launching the GUI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-installing-the-spo-service-linux-only-for-real-time-prediction" class="nav-link">4. Installing the SPO Service (Linux only, for real-time prediction)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-downloading-pre-trained-artifacts-optional" class="nav-link">5. Downloading Pre-trained Artifacts (optional)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-verifying-the-installation" class="nav-link">6. Verifying the Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="installation-and-setup">Installation and Setup</h1>
+<blockquote>
+<p><strong>Note:</strong> wAIk does not include a login or authentication system. The application runs locally on your device — simply running it is enough.</p>
+</blockquote>
+<hr />
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before installation, make sure you have the following available:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Version</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td>3.12.8</td>
+<td>Exact version recommended</td>
+</tr>
+<tr>
+<td><code>uv</code></td>
+<td>latest</td>
+<td>Package and virtual environment manager</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>any</td>
+<td>For cloning the repository</td>
+</tr>
+<tr>
+<td>CUDA drivers</td>
+<td>≥ 11.8</td>
+<td>Optional; needed only for GPU-accelerated training</td>
+</tr>
+<tr>
+<td><code>just</code></td>
+<td>latest</td>
+<td>Optional; simplifies common commands</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Installing <code>uv</code></strong> (if you don't already have it):</p>
+<pre><code class="language-sh"># Windows (PowerShell)
+powershell -ExecutionPolicy ByPass -c &quot;irm https://astral.sh/uv/install.ps1 | iex&quot;
+
+# Linux / macOS
+curl -LsSf https://astral.sh/uv/install.sh | sh
+</code></pre>
+<p><strong>Installing <code>just</code></strong> (optional):</p>
+<pre><code class="language-sh"># Using uv (after installing uv)
+uv tool install just
+
+# Linux (Debian/Ubuntu)
+sudo apt install just
+</code></pre>
+<hr />
+<h2 id="1-cloning-and-installing-dependencies">1. Cloning and Installing Dependencies</h2>
+<p>Clone the repository and install all Python dependencies with a single command:</p>
+<pre><code class="language-sh">git clone &lt;repo-url&gt;
+cd wAIk-projekt
+uv sync
+</code></pre>
+<p><code>uv sync</code> automatically creates a virtual environment (<code>.venv/</code>) and installs all dependencies from <code>pyproject.toml</code> into it. After this step, you don't need internet access for basic operation.</p>
+<hr />
+<h2 id="2-preparing-the-folder-structure">2. Preparing the Folder Structure</h2>
+<p>The application expects the following folders at the project root:</p>
+<pre><code>wAIk-projekt/
+├── binaries/    ← raw .bin recordings from the IMU sensor
+├── samples/     ← processed .npz samples
+└── artifacts/   ← saved models, metrics, plots
+</code></pre>
+<p><strong>Option A — using <code>just</code>:</strong></p>
+<pre><code class="language-sh">just setup
+</code></pre>
+<p><strong>Option B — manual:</strong></p>
+<pre><code class="language-sh">mkdir binaries samples artifacts
+</code></pre>
+<p>The folders are empty on first install. You add the contents (recordings and samples) yourself, or import them using the <code>just pull-artifacts</code> command (see section 5).</p>
+<hr />
+<h2 id="3-launching-the-gui">3. Launching the GUI</h2>
+<pre><code class="language-sh">uv run python app.py
+</code></pre>
+<p>Alternatively, if you have <code>just</code> installed:</p>
+<pre><code class="language-sh">just app
+</code></pre>
+<p>On startup, the main application window opens with the following tabs:</p>
+<table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset</td>
+<td>Creating <code>.npz</code> samples from <code>.bin</code> recordings</td>
+</tr>
+<tr>
+<td>Training</td>
+<td>Training the CNN model for identity recognition</td>
+</tr>
+<tr>
+<td>Artifact View</td>
+<td>Reviewing saved models and metrics</td>
+</tr>
+<tr>
+<td>Live Predict</td>
+<td>Real-time prediction (requires the SPO service)</td>
+</tr>
+<tr>
+<td>Predict</td>
+<td>Prediction from existing <code>.npz</code> files</td>
+</tr>
+<tr>
+<td>Sample View</td>
+<td>Visualization of <code>.npz</code> samples</td>
+</tr>
+<tr>
+<td>View Binaries</td>
+<td>Visualization of raw <code>.bin</code> recordings</td>
+</tr>
+<tr>
+<td>History</td>
+<td>Reviewing and exporting prediction history</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-installing-the-spo-service-linux-only-for-real-time-prediction">4. Installing the SPO Service (Linux only, for real-time prediction)</h2>
+<p>This step is needed <strong>only</strong> if you want to run real-time predictions via a physical IMU sensor. This functionality is not supported on Windows and macOS.</p>
+<p>The SPO service is a system daemon that listens on <code>127.0.0.1:5000</code> and forwards the binary data stream from the sensor to the application.</p>
+<p><strong>1. Copy the service file:</strong></p>
+<pre><code class="language-sh">cp spo/spo.service ~/.config/systemd/user/spo.service
+</code></pre>
+<p>Instead of copying, you can create a symbolic link, which makes updates easier:</p>
+<pre><code class="language-sh">ln -s &quot;$(pwd)/spo/spo.service&quot; ~/.config/systemd/user/spo.service
+</code></pre>
+<p><strong>2. Enable and start the service:</strong></p>
+<pre><code class="language-sh">systemctl --user enable spo
+systemctl --user start spo
+</code></pre>
+<p><strong>3. Check the status:</strong></p>
+<pre><code class="language-sh">systemctl --user status spo
+</code></pre>
+<p>The output must contain <code>active (running)</code>. After this, the service will start automatically on every login.</p>
+<hr />
+<h2 id="5-downloading-pre-trained-artifacts-optional">5. Downloading Pre-trained Artifacts (optional)</h2>
+<p>If you don't want to train the model yourself, you can download pre-trained weights and artifacts:</p>
+<pre><code class="language-sh">just pull-artifacts v0.1
+</code></pre>
+<p>The command downloads the saved models, XGBoost regressors, and metrics for the <code>v0.1</code> tag and stores them in the <code>artifacts/</code> folder. After this step, the <em>Predict</em> and <em>Artifact View</em> tabs are immediately usable.</p>
+<hr />
+<h2 id="6-verifying-the-installation">6. Verifying the Installation</h2>
+<p>Run the test suite to verify the installation is correct:</p>
+<pre><code class="language-sh">uv run pytest -m &quot;not slow and not local&quot;
+</code></pre>
+<p>Tests tagged <code>slow</code> require a longer execution time (model training), while those tagged <code>local</code> require access to local data files or hardware. For a basic installation check, these are skipped.</p>
+<p>A successful output looks like this:</p>
+<pre><code>============================= test session starts ==============================
+...
+===================== N passed in X.XXs =======================================
+</code></pre>
+<p>If errors occur, check:</p>
+<ul>
+<li>Whether the Python version is exactly 3.12.8 (<code>uv run python --version</code>)</li>
+<li>Whether all dependencies are installed (<code>uv sync</code>)</li>
+<li>Whether the <code>binaries/</code>, <code>samples/</code>, and <code>artifacts/</code> folders exist</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

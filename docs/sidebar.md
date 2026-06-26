@@ -1,6 +1,6 @@
 # wAIk Wiki
 
-- [Home / Project Specifications](Home)
-- [Installation and Setup](Installation-and-Login)
-- [Use Cases](Use-Cases)
-- [Feature Documentation](Feature-Documentation)
+- [Home / Project Specifications](Home.md)
+- [Installation and Setup](Installation-and-Login.md)
+- [Use Cases](Use-Cases.md)
+- [Feature Documentation](Feature-Documentation.md)
