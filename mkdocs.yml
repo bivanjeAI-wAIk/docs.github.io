@@ -7,7 +7,7 @@ theme:
   name: material
 
 nav:
-  - Home: Home.md
+  - Home: index.md
   - Project Specifications: Project-Specifications.md
   - Installation and Setup: Installation-and-Login.md
   - Use Cases: Use-Cases.md
